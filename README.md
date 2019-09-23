@@ -6,6 +6,5 @@ Currently in this repo:
 2. LICENSE
 3. Design Folder containing:
 
-  a. Functional_Diagram.pdf
-  
-  b. ERD.pdf
+a. Functional_Diagram.pdf
+b. ERD.pdf
