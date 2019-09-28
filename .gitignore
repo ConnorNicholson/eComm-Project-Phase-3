@@ -1,2 +1,13 @@
+#PASSWORD PROTECTION!!!
+.env
+
+#Very annoying .DS_Store files
 .DS_Store
+client/.DS_Store
+dB_schema/.DS_Store
 design/.DS_Store
+routes/.DS_Store
+server/.DS_Store
+
+#node modules
+node_modules/
