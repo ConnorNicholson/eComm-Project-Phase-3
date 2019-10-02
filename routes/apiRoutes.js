@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 });
 
 // sets a constant var to a MySQL query that is used multiple times
-const mainQuery = "SELECT product_name, product_description, img_url, stock_quantity, Prices.price FROM Products INNER JOIN Prices ON price_id = Products.product_id";
+const mainQuery = "SELECT product_name, product_description, img_url, Prices.price FROM Products INNER JOIN Prices ON price_id = Products.product_id";
 
 // Connect to MySQL database and execute the mainQuery var, display content in table in Terminal
 connection.connect(function(err) {
@@ -29,7 +29,11 @@ connection.connect(function(err) {
 
 // First Router.get method. Currently sends a string 'Hi'. Update to send Home Page of React site
 router.get('/', function(req, res) {
-    res.status(200).send('HELLO WORLD');
+    if (err) {
+        throw err;
+    } else {
+        res.status(200).send('Server is running');
+    }
 });
 
 // Second Router.get method. Sends all products and their matching prices
@@ -40,7 +44,7 @@ router.get('/products', function(req, res) {
         if (err) {
             throw err;
         } else {
-            res.send(data);
+            res.status(200).send(data);
         };
     });
     
@@ -49,11 +53,11 @@ router.get('/products', function(req, res) {
 // Third Router.get() method. Sends all data from Contacts table
 router.get('/contacts', function(req, res) {
 
-    connection.query("SELECT * FROM Contacts", function(err, data) {
+    connection.query("SELECT contact_name, comments FROM Contacts ORDER BY RAND() LIMIT 3", function(err, data) {
         if (err) {
             throw err;
         } else {
-            res.send(data);
+            res.status(200).send(data);
         };
     });
 
@@ -67,7 +71,7 @@ router.get('/productfilter/:query', function(req, res) {
         if (err) {
             throw err;
         } else {
-            res.send(data);
+            res.status(200).send(data);
         };
     });
 
@@ -78,7 +82,7 @@ router.get('/productprice/lowprice', function(req, res) {
         if (err) {
             throw err;
         } else {
-            res.send(data);
+            res.status(200).send(data);
         };
     });
 });

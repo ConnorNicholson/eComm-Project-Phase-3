@@ -2,53 +2,10 @@ import React from 'react'
 import ProductCard from './ProductCard'
 
 class Filter extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            everything: true,
-            telescopes: false,
-            sextants: false,
-            belowThousand: false
-        }
-    }
 
     render() {
 
-        const viewEverything = () => {
-            this.setState({
-                everything: true,
-                telescopes: false,
-                sextants: false,
-                belowThousand: false
-            })
-        }
-
-        const telescopes = () => {
-            this.setState({
-                everything: false,
-                telescopes: true,
-                sextants: false,
-                belowThousand: false
-            })
-        }
-        
-        const sextants = () => {
-            this.setState({
-                everything: false,
-                telescopes: false,
-                sextants: true,
-                belowThousand: false
-            })
-        }
-
-        const belowThousand = () => {
-            this.setState({
-                everything: false,
-                telescopes: false,
-                sextants: false,
-                belowThousand: true
-            })
-        }
+        const {viewEverything, telescopes, sextants, belowThousand} = this.props
 
         return (
             <main className="product-main">
@@ -67,7 +24,7 @@ class Filter extends React.Component {
                     <input type="radio" id="reset" name="color" onClick={viewEverything}/>
                     <label className="filter-label" htmlFor="reset">All</label>
                     
-                    <ProductCard allProducts={this.props.allProducts} everything={this.state.everything} telescopes={this.state.telescopes} sextants={this.state.sextants} belowThousand={this.state.belowThousand}/>
+                    <ProductCard allProducts={this.props.allProducts}/>
                     
 
                 </div>

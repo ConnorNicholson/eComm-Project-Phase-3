@@ -12,6 +12,9 @@ html,body {
 @media only screen 
     and (min-device-width: 1281px)
     and (max-device-width: 3000px) {
+        .navbar {
+            font-size: 20px;
+        }
         .index-intro {
             font-size: 70px;
         }
@@ -65,6 +68,9 @@ html,body {
 @media only screen 
     and (min-device-width: 950px) 
     and (max-device-width: 1280px)  {
+        .navbar {
+            font-size: 20px;
+        }
         .index-intro {
             font-size: 70px;
         }
@@ -112,6 +118,9 @@ html,body {
 @media only screen 
     and (min-device-width: 768px)
     and (max-device-width: 949px) {
+        .navbar {
+            font-size: 20px;
+        }
         .index-intro {
             font-size: 50px;
         }
@@ -162,6 +171,9 @@ html,body {
 @media only screen 
     and (min-device-width: 320px)
     and (max-device-width: 767px) {
+        .navbar {
+            font-size: 20px;
+        }
         .index-intro {
             font-size: 50px;
         }
@@ -209,6 +221,9 @@ html,body {
         .contact-form {
             margin-bottom: 30px;
         }
+        .navbar {
+            font-size: 15px;
+        }
     }
 
 
@@ -220,10 +235,17 @@ html,body {
     background-color: rgba(21, 31, 33, 0.5);
     border-bottom: 1px solid #d21313;
     font-family: 'Alegreya Sans', sans-serif;
+    text-align: center;
+    margin: 0;
 }
 
-.navbar .navbar-toggler {
+.navbar a {
     color: #d21313;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #fff;
 }
 
 .navbar-brand {
@@ -231,16 +253,6 @@ html,body {
     height: 50px;
     background: none;
     border: none;
-}
-
-.navbar .navbar-nav .nav-link {
-    color: #d21313;
-    background: none;
-    border: none;   
-}
-
-.navbar .navbar-nav .nav-link:hover {
-    color: #fff;
 }
 
 .navbar .navbar-nav .active-link {
@@ -345,6 +357,16 @@ button:focus {
     background-color: black;
     border-bottom: 1px solid #d21313;
     padding-top: 30px;
+}
+
+.products-header {
+    background: url(https://res.cloudinary.com/connorn/image/upload/v1570048364/Assets%20ECommerce/stars_background_qfwmkm.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d21313;
 }
 
 .product-content {
@@ -507,6 +529,33 @@ label {
     font-weight: bold;
 }
 
+
+
+/* COMMENTS SECTION */
+
+.comments-main {
+    background-size: cover;
+    background-color: black;
+    border-bottom: 1px solid #d21313;
+    padding-top: 30px;
+}
+
+.comments-container {
+    background-color: #000;
+    text-align: center;
+    padding: 100px;
+}
+
+.comments-header {
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.comments-display {
+    color: #fff;
+    padding: 20px 0 20px;
+    border-bottom: solid #ccbdbd81 1px;
+}
 
 
 /* FOOTER */

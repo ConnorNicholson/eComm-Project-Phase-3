@@ -3,16 +3,40 @@ import '../lib/css/styles.css'
 
 
 function ProductCard(props) {
-const {everything, telescopes, sextants, belowThousand, allProducts} = props
+    
+    const {allProducts} = props
 
+    function displayProducts() {
 
-// Temp Fix to display MySQL :D
+        const mappedProducts = allProducts.map((product, index) => {
+            return (
+                <div key={index}>
+                    <div className="product-display">
+                        <h2 className="card product-name">{product.product_name}</h2>
+                        <img className="card product-img" src={product.img_url}/>
+                        <div className="card product-description">
+                            <p>{product.product_description}</p>
+                            <p>Price: ${product.price}</p>
+                        </div>
+                    </div>
+                </div>        
+            );
+        });
+            return mappedProducts;
+        };
+
     return (
-        allProducts
-    )
+        displayProducts()
+    );
+};
+
+export default ProductCard;
 
 // if (everything) {
-//     const mappedProducts = props.allProducts.map(product => {
+
+
+
+//     const mappedProducts = allProducts.map(product => {
 
 //         return (
 //             <div>
@@ -29,6 +53,7 @@ const {everything, telescopes, sextants, belowThousand, allProducts} = props
 //     })
 
 //     return mappedProducts;
+// }
 // } else if (telescopes) {
 //     const mappedProducts = props.productsArray.filter(product=>product.telescope).map(product => {
 
@@ -87,8 +112,3 @@ const {everything, telescopes, sextants, belowThousand, allProducts} = props
 // return mappedProducts;
 
 // }
-}
-
-
-
-  export default ProductCard

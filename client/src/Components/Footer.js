@@ -20,7 +20,6 @@ function Footer() {
                   <li className="list-inline-item"><a href="https://rss.com/" target="_blank" rel="noopener noreferrer"><i className="fa fa-rss fa-2x" aria-hidden="true"></i>{null}</a></li>
                 </ul>
                   <div>
-                    <p>Logo made using <a href="https://logomakr.com/" target="_blank" rel="noopener noreferrer" className="logomakr_link">LogoMakr</a></p>
                     <p>&copy; 2019 Designed by AstroTech</p>
                   </div>
             </div>

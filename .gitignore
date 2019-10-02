@@ -8,6 +8,9 @@ dB_schema/.DS_Store
 design/.DS_Store
 routes/.DS_Store
 server/.DS_Store
+test/.DS_Store
+proxy/.DS_Store
+logging/.DS_Store
 
 #node modules
 node_modules/
