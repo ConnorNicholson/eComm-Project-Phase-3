@@ -42,7 +42,7 @@ class Contact extends React.Component {
             });
           };
 
-        // Arrow function 'submitUserRegistrationForm'. First it cancels the event if it is cancelable, meaning the submit button will not automatically 'submit'. Then checks if the 'validateForm' function passed. If it passed, create a variable called fields and set it to an empty object. Then use bracket notation to set 'fields.username' and 'fields.email' to empty strings. Last, set the state of fields to equal the fields object.
+        // Arrow function 'submitUserRegistrationForm'. First it cancels the event if it is cancelable, meaning the submit button will not automatically 'submit'. Then checks if the 'validateForm' function passed. If it passed, create a variable called fields and set it to an empty object. Then use bracket notation to set 'fields.username', 'fields.email', 'fields.subject' and 'fields.comment' to empty strings. Last, set the state of fields to equal the fields object.
 
         let submitUserRegistrationForm = (e) => {
             e.preventDefault();
@@ -120,6 +120,7 @@ class Contact extends React.Component {
               </div>
 
             </header>
+            {/* Calls the components 'ContactsDisplay' and 'Footer' */}
             <ContactsDisplay contacts={this.state.contacts}/>
             <Footer />
           </div>

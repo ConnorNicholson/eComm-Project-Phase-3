@@ -8,15 +8,16 @@ const apiRoutes = require('./routes/apiRoutes');
 
 // Set app to express function
 const app = express();
-// Line 10: sets PORT to equal the enviroment variable, or if nothing exists in the the env var, than set PORT to 3000
+// Sets PORT to equal 3000
 const PORT = 3001;
 
-app.use(express.urlencoded({extended: true})); // Parses incoming request with urlencoded payloads
-
 app.use(helmet()); // Added security
+
+// Morgan logging - will log all HTTP request to the morgan.log file
 app.use(logger('common', {
     stream: fs.createWriteStream('./logging/morgan.log', {flags: 'a'})
 }));
+// morgan format
 app.use(logger('dev'));
 
 // calls routes from apiRoutes.js file

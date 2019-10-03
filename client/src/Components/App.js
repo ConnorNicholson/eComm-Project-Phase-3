@@ -40,6 +40,7 @@ class App extends React.Component {
     this.fetchSpecificEndpoint()
   };
 
+  // When the application updates (for instance the state changes) componenetDidUpdate will re-render
   componentDidUpdate(oldProps, oldState) {
     if (this.state.everything !== oldState.everything || 
       this.state.telescopes !== oldState.telescopes || 
@@ -99,6 +100,8 @@ class App extends React.Component {
 
   render() {
 
+    // react-router-dom is used for the Navbar
+  
     const routing = (
       <Router>
         <div>
