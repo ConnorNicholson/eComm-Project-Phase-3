@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeHeader from './HomeHeader'
 import Footer from './Footer'
 import '../lib/css/styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
@@ -6,19 +7,8 @@ import { Carousel } from 'react-responsive-carousel'
 
 function Home() {
     return (
-        <div className="header">
-        <header className="index-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <h1 className="index-intro">Welcome to <span className="siteName">AstroTech</span></h1>
-                <div className="header-info">
-                <p className="index-text">Since the beginning of time, the night sky has enthralled millions across the globe. Over the centuries, mankind's endeavor to understand cosmic phenomena has led to outstanding breakthroughs in the field of astronomy. It is our promise to support the advance of astronomical knowledge and to carry the very best equipment possible. Exploring the stars has never been easier.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+      <div className="header">
+        <HomeHeader />
         <main className="index-main">
           <h2 className="slider-header">Product Showcase:</h2>
           <div className="slider-container">

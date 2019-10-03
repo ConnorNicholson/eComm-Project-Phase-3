@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 
+// sets a constant var to a MySQL query that is used multiple times
+const mainQuery = "SELECT product_name, product_description, img_url, Prices.price FROM Products INNER JOIN Prices ON price_id = Products.product_id";
+
 // Create database connection
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -12,9 +15,6 @@ const connection = mysql.createConnection({
     password: process.env.MYPASSWORD,
     database: 'products_db'
 });
-
-// sets a constant var to a MySQL query that is used multiple times
-const mainQuery = "SELECT product_name, product_description, img_url, Prices.price FROM Products INNER JOIN Prices ON price_id = Products.product_id";
 
 // Connect to MySQL database and execute the mainQuery var, display content in table in Terminal
 connection.connect(function(err) {
