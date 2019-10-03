@@ -18,14 +18,14 @@ AstroTech is dedicated to carrying top of the line astronomical equipment.
 
 ## Download Node Modules
 To download the required node_modules, enter this command in your Terminal:
-    ```bash
+    ```
     npm init
     ```
 
 ## Additional Notes:
 
 In the package.json file in the root directory, there are custom scripts that allow the developer to start both the Express server and the React App at the same time. To execute this script, open Terminal and run this line:
-    ```bash
+    ```
     npm start
     ```
 
