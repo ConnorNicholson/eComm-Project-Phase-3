@@ -53,7 +53,7 @@ router.get('/products', function(req, res) {
 // Third Router.get() method. Sends all data from Contacts table
 router.get('/contacts', function(req, res) {
 
-    connection.query("SELECT contact_name, comments FROM Contacts ORDER BY RAND() LIMIT 3", function(err, data) {
+    connection.query("SELECT contact_name, comments FROM Contacts ORDER BY RAND()", function(err, data) {
         if (err) {
             throw err;
         } else {
